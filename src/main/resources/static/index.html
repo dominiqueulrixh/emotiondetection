@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Emotion Detection</title>
+    <link rel="icon" type="image" href="images/favicon.png">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="script.js" async></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/favicon.png" width="4%" class="d-inline-block align-center" alt="smiley">
+            Emotion Detection
+        </a>
+    </nav>
+
+    <div class="middle">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Emotion Detection</h1> <br>
+                    <p>Laden Sie Ihr Bild hoch und entdecken Sie die Emotionen, die es ausstrahlt! Diese
+                        fortschrittliche <br>
+                        Technologie analysiert die Stimmungen präzise und zeigt Ihnen die Ergebnisse in Echtzeit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Bitte laden Sie hier ihr Bild hoch (jpeg, png)</label>
+                            <input type="file" accept="image/png, image/jpeg" class="form-control-file" id="image"
+                                name="image" onchange="checkFiles(this.files);">
+                        </div>
+                    </form>
+                    <br>
+                    <p id="previewPart" style="visibility: hidden;"><b>Analysiertes Bild:</b> </p>
+                    <p><img id="preview" height="120" src="#" alt="preview" style="visibility: hidden;" /> </p>
+
+                </div>
+                <div class="col-6">
+
+                    <div id="answerPart" style="visibility: hidden;">
+                        <p><b>Auswertung inkl. Wahrscheinlichkeit:</b>
+                        <div id="answer"></div>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                DeepJavaLibrary (DJL) demonstriert von ulricdo1 | FS2024 Model Deployment and Maintenance
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
