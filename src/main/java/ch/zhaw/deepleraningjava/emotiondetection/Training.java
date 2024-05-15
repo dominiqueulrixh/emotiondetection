@@ -85,7 +85,7 @@ public final class Training {
         ImageFolder dataset = ImageFolder.builder()
                 // retrieve the data
                 .setRepositoryPath(Paths.get(datasetRoot))
-                .optMaxDepth(60)
+                .optMaxDepth(50)
                 .addTransform(new Resize(Models.IMAGE_WIDTH, Models.IMAGE_HEIGHT))
                 .addTransform(new ToTensor())
                 // random sampling; don't process the data in order

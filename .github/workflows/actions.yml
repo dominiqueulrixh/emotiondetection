@@ -17,7 +17,7 @@ jobs:
       with:
         source_dir: 'models'
         container_name: 'modelemotiondetection'
-        connection_string: ${{ secrets.ACCESSKEY }}
+        connection_string: ${{secrets.ACCESSKEY}}
         extra_args: '--pattern *.txt'
         overwrite: 'true'
 
@@ -26,6 +26,6 @@ jobs:
       with:
         source_dir: 'models'
         container_name: 'modelemotiondetection'
-        connection_string: ${{ secrets.ACCESSKEY }}
+        connection_string: ${{secrets.ACCESSKEY}}
         extra_args: '--pattern *.params'
         overwrite: 'true'
