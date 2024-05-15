@@ -7,11 +7,12 @@ FROM openjdk:21-jdk-slim
 
 #Copy Files
 WORKDIR /usr/src/app
-COPY . .
+COPY --from=build /usr/src/app/target/emotiondetection-0.0.1-SNAPSHOT.jar .
+
 
 # Install
 RUN mvn -Dmaven.test.skip=true package
 
 # Docker Run Command
 EXPOSE 8080
-CMD ["java","-jar","playground-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar","emotiondetection-0.0.1-SNAPSHOT.jar"]

@@ -28,7 +28,7 @@ public final class Training {
     private static final int BATCH_SIZE = 32;
 
     // the number of passes over the complete dataset
-    private static final int EPOCHS = 1;
+    private static final int EPOCHS = 20;
 
     public static void main(String[] args) throws IOException, TranslateException {
         // the location to save the model
@@ -85,7 +85,7 @@ public final class Training {
         ImageFolder dataset = ImageFolder.builder()
                 // retrieve the data
                 .setRepositoryPath(Paths.get(datasetRoot))
-                .optMaxDepth(1)
+                .optMaxDepth(60)
                 .addTransform(new Resize(Models.IMAGE_WIDTH, Models.IMAGE_HEIGHT))
                 .addTransform(new ToTensor())
                 // random sampling; don't process the data in order
