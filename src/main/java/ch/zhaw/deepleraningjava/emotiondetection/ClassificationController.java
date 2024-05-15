@@ -38,6 +38,4 @@ public class ClassificationController {
             throw new Exception("Failed to process image.", e);
         }
     }
-
-    
 }
