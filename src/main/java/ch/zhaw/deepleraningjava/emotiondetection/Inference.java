@@ -28,7 +28,7 @@ import javax.imageio.ImageIO;
 public class Inference {
 
     private static final String MODEL_DIRECTORY = "azuremodel";
-    private static final String PARAMS_FILE = "emotionclassifier-0005.params";
+    private static final String PARAMS_FILE = "emotionclassifier-0020.params";
     private static final String SYNSET_FILE = "synset.txt";
 
     private Predictor<Image, Classifications> predictor;
