@@ -68,7 +68,7 @@ public class Inference {
         try {
             // Connect to Azure Blob Storage
             String containerName = "modelemotiondetection";
-            String accessKey = ("DefaultEndpointsProtocol=https;AccountName=modelemotiondetection;AccountKey=44CjkRSLUVtR89bBeCnOMLOcmIA8ginEdHWApiYvOsS1G9GnKl9EF8WGWaKJtgtXPJ4IAOgWQBcF+AStwSN8CQ==;EndpointSuffix=core.windows.net");
+            String accessKey = System.getenv("AZURE_STORAGE_KEY");
 
             BlobServiceClientBuilder serviceClientBuilder = new BlobServiceClientBuilder()
                     .connectionString(accessKey);
